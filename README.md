@@ -10,8 +10,12 @@ Download glove.6B.100d.txt
 pytorch 1.1.0
 python 3.6.4
 cuda 8.0
+### Before running code
+1. Copy glove.6b.100d.txt to `data/`
+2. Copy ori_train.txt, ori_test.txt, ori_valid.txt to `data/conll2003/`
+3. Run `convert_to_sample_format.py`
 ### Instructions for running code
-#### Phrase one \<train bnPU model\>
+#### Phase one \<train bnPU model\>
 **Train**
 Print parameters
 `run python feature_pu_model.py  --h`
@@ -45,7 +49,7 @@ python final_evl.py
 ```
 Get the final result on all the entity type. Remember to revise the filenames to be the output file name of evaluating.
 
-#### Phrase two \<train adaPU model\>
+#### Phase two \<train adaPU model\>
 **dictionary generation**
 `run python ada_dict_generation.py -h`
 ```html
